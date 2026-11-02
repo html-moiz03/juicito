@@ -17,8 +17,7 @@ export const INFO = {
   ],
   // Optional: paste an exact Google Maps share link as  mapUrl: '...'  on a branch to override the search
   hours: [
-    { days: 'MON – THU', time: '--:-- → --:--' },
-    { days: 'FRI – SUN', time: '--:-- → --:--' },
+    { days: 'MON – SUN', time: '12:00 PM → 2:00 AM' },
   ],
   instagram: '#',
   facebook: '#',
