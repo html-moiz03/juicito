@@ -1,9 +1,13 @@
-import { useLayoutEffect, useRef } from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { INFO, TEL, PHONE } from '../data.js'
 
 export default function Visit() {
   const root = useRef(null)
+  const [active, setActive] = useState(0)
+  const cur = INFO.branches[active]
+  const embed = 'https://www.google.com/maps?q=' + encodeURIComponent(cur.q) + '&z=16&output=embed'
+  const open = cur.mapUrl || 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(cur.q)
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -46,7 +50,7 @@ export default function Visit() {
           </div>
           <div className="vis__btns vis__reveal">
             <a className="btn btn--cream" href={TEL}>📞 {PHONE}</a>
-            <a className="btn btn--line" href="#find">Get directions ↗</a>
+            <a className="btn btn--line" href={open} target="_blank" rel="noreferrer">Get directions ↗</a>
           </div>
           <div className="vis__chips vis__reveal">
             <a href={INFO.foodpanda}>foodpanda</a>
@@ -62,27 +66,21 @@ export default function Visit() {
         </div>
 
         <div className="vis__map">
-          <svg viewBox="0 0 500 380" aria-hidden="true">
-            <rect width="500" height="380" fill="#f6f0dc" />
-            <g stroke="#fff" strokeWidth="14" strokeLinecap="round" fill="none">
-              <path d="M-10 250 C120 230 200 190 300 200 S450 150 520 160" />
-              <path d="M180 -10 C190 80 230 140 250 200 S270 320 290 400" />
-              <path d="M-10 90 C100 110 180 80 280 60 S430 40 520 70" />
-              <path d="M380 -10 C370 100 400 160 390 230 S420 330 430 400" />
-            </g>
-            <g fill="#dcd2b0" opacity=".7">
-              <rect x="30" y="130" width="60" height="40" rx="6" /><rect x="100" y="150" width="50" height="34" rx="6" />
-              <rect x="300" y="100" width="56" height="40" rx="6" /><rect x="320" y="230" width="48" height="50" rx="6" />
-              <rect x="60" y="290" width="70" height="44" rx="6" /><rect x="440" y="250" width="44" height="50" rx="6" />
-              <rect x="150" y="30" width="60" height="30" rx="6" />
-            </g>
-            <g transform="translate(250 190)">
-              <path d="M0 0 C-30 -40 -34 -70 0 -82 C34 -70 30 -40 0 0Z" fill="#e6007e" stroke="#fff" strokeWidth="4" />
-              <text x="0" y="-48" textAnchor="middle" fontFamily="Archivo" fontWeight="900" fontSize="26" fill="#fff6e6">J</text>
-            </g>
-          </svg>
-          <div className="vis__bubble">Here!<small>JUICITO</small></div>
-          <p className="vis__mapnote">{INFO.mapNote}</p>
+          <div className="vis__tabs" role="tablist">
+            {INFO.branches.map((b, i) => (
+              <button key={b.q} role="tab" aria-selected={i === active}
+                className={i === active ? 'on' : ''} onClick={() => setActive(i)}>
+                {b.tab}
+              </button>
+            ))}
+          </div>
+          <div className="vis__frame">
+            <iframe key={embed} title={'JUICITO – ' + cur.name + ' ' + cur.area}
+              src={embed} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
+          </div>
+          <a className="vis__open" href={open} target="_blank" rel="noreferrer">
+            📍 {cur.name} · {cur.area} — open in Google Maps ↗
+          </a>
           <div className="vis__spin" aria-hidden="true">
             <svg viewBox="0 0 200 200">
               <defs><path id="circ2" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0" /></defs>

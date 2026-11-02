@@ -9,13 +9,13 @@ export const TEL = 'tel:03111110382'
 
 export const INFO = {
   branches: [
-    { name: 'Satellite Town', area: 'Commercial Market, 4th Road', phones: ['0332-8777828', '051-8777828'] },
-    { name: 'Bahria Town Phase 4', area: 'Civic Center', phones: ['0335-7316100', '051-5731610', '0300-0341022'] },
-    { name: 'Bahria Town Phase 7', area: 'Spring North', phones: ['0336-0026333', '051-5400263'] },
-    { name: 'Bahria Town Phase 7', area: 'Main Expressway / Sector F', phones: ['0336-6600151', '051-2000791'] },
-    { name: 'DHA Phase 5', area: 'DHA 2 / EMAAR, Islamabad', phones: ['0334-6108787', '051-6108787'] },
+    { tab: 'Satellite Town', q: 'Juicito Commercial Market 4th Road Satellite Town Rawalpindi', name: 'Satellite Town', area: 'Commercial Market, 4th Road', phones: ['0332-8777828', '051-8777828'] },
+    { tab: 'Civic Center Ph 4', q: 'Juicito Civic Center Bahria Town Phase 4 Rawalpindi', name: 'Bahria Town Phase 4', area: 'Civic Center', phones: ['0335-7316100', '051-5731610', '0300-0341022'] },
+    { tab: 'Spring North Ph 7', q: 'Juicito Spring North Bahria Town Phase 7 Rawalpindi', name: 'Bahria Town Phase 7', area: 'Spring North', phones: ['0336-0026333', '051-5400263'] },
+    { tab: 'Main Ph 7', q: 'Juicito Main Expressway Bahria Town Phase 7 Rawalpindi', name: 'Bahria Town Phase 7', area: 'Main Expressway / Sector F', phones: ['0336-6600151', '051-2000791'] },
+    { tab: 'DHA Ph 5', q: 'Juicito DHA Phase 5 Islamabad', name: 'DHA Phase 5', area: 'DHA 2 / EMAAR, Islamabad', phones: ['0334-6108787', '051-6108787'] },
   ],
-  mapNote: 'Google Maps embed goes here',
+  // Optional: paste an exact Google Maps share link as  mapUrl: '...'  on a branch to override the search
   hours: [
     { days: 'MON – THU', time: '--:-- → --:--' },
     { days: 'FRI – SUN', time: '--:-- → --:--' },
