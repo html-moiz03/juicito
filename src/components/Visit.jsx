@@ -25,9 +25,24 @@ export default function Visit() {
         <div className="vis__left">
           <p className="eyebrow eyebrow--yellow vis__reveal">JUICITO, IT'S AT</p>
           <h2 className="vis__h vis__reveal">FIND<br />JUICITO</h2>
-          <div className="vis__addr vis__reveal">
-            <span aria-hidden="true">📍</span>
-            <p>{INFO.addressLines.map((l) => (<span key={l}>{l}<br /></span>))}</p>
+          <div className="vis__branches vis__reveal">
+            <p className="vis__bn">{INFO.branches.length} BRANCHES</p>
+            <ul>
+              {INFO.branches.map((b) => (
+                <li key={b.name + b.area}>
+                  <div className="vb__head">
+                    <span aria-hidden="true">📍</span>
+                    <b>{b.name}</b>
+                    <small>{b.area}</small>
+                  </div>
+                  <div className="vb__tels">
+                    {b.phones.map((p) => (
+                      <a key={p} href={'tel:' + p.replace(/\D/g, '')}>{p}</a>
+                    ))}
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
           <div className="vis__btns vis__reveal">
             <a className="btn btn--cream" href={TEL}>📞 {PHONE}</a>

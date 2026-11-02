@@ -8,7 +8,13 @@ export const PHONE = '031 1110 382'
 export const TEL = 'tel:03111110382'
 
 export const INFO = {
-  addressLines: ['ADD BRANCH ADDRESS', 'ADD AREA, CITY'],
+  branches: [
+    { name: 'Satellite Town', area: 'Commercial Market, 4th Road', phones: ['0332-8777828', '051-8777828'] },
+    { name: 'Bahria Town Phase 4', area: 'Civic Center', phones: ['0335-7316100', '051-5731610', '0300-0341022'] },
+    { name: 'Bahria Town Phase 7', area: 'Spring North', phones: ['0336-0026333', '051-5400263'] },
+    { name: 'Bahria Town Phase 7', area: 'Main Expressway / Sector F', phones: ['0336-6600151', '051-2000791'] },
+    { name: 'DHA Phase 5', area: 'DHA 2 / EMAAR, Islamabad', phones: ['0334-6108787', '051-6108787'] },
+  ],
   mapNote: 'Google Maps embed goes here',
   hours: [
     { days: 'MON – THU', time: '--:-- → --:--' },

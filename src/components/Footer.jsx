@@ -42,7 +42,7 @@ export default function Footer() {
       </div>
       <div className="ftr__line">
         <b className="ftr__logo">JUICITO</b>
-        <span>Refreshing · Hygienic · Energetic · Freshly prepared for you</span>
+        <span>Fresh &amp; healthy snacks for people on the go</span>
         <span>© 2026 JUICITO · Website concept</span>
       </div>
     </footer>

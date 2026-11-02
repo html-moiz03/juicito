@@ -409,3 +409,25 @@ body.is-ready .hero__word .l { opacity: 1; transform: translateY(0) rotate(var(-
   .ribbon__track, .flv__row, .badge svg, .vis__spin svg, .flv__set span { animation: none; }
   .hero__word .l { transition: none; }
 }
+
+/* branches list */
+.vis__branches { margin-top: 26px; }
+.vis__bn { font: 800 .8rem/1 var(--wide); font-stretch: 125%; letter-spacing: .08em; color: var(--yellow); margin-bottom: 12px; }
+.vis__branches ul { display: grid; gap: 6px; }
+.vis__branches li { display: flex; align-items: center; gap: 12px; font: 800 clamp(1.4rem, 2.8vw, 2.2rem)/1.05 var(--cond); text-transform: uppercase; }
+.vis__branches li span { font-size: 1.1rem; }
+
+/* branch cards with phone numbers */
+.vis__in { align-items: start; }
+.vis__map { position: sticky; top: 110px; }
+.vis__branches ul { gap: 0; }
+.vis__branches li { display: block; padding: 12px 0; border-bottom: 1px dashed rgba(255,246,230,.4); font: inherit; text-transform: none; }
+.vis__branches li:last-child { border-bottom: 0; }
+.vb__head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 10px; }
+.vb__head span { font-size: 1rem; }
+.vb__head b { font: 800 clamp(1.4rem, 2.6vw, 2rem)/1 var(--cond); text-transform: uppercase; }
+.vb__head small { font: 600 .95rem/1.2 var(--body); opacity: .9; }
+.vb__tels { margin: 8px 0 0 28px; display: flex; flex-wrap: wrap; gap: 8px; }
+.vb__tels a { border: 2px solid rgba(255,246,230,.7); border-radius: 999px; padding: 6px 14px; font: 800 .78rem/1 var(--wide); font-stretch: 112%; letter-spacing: .02em; transition: background .2s, color .2s; }
+.vb__tels a:hover { background: var(--cream); color: var(--green); }
+@media (max-width: 900px) { .vis__map { position: static; } .vb__tels { margin-left: 0; } }
