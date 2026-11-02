@@ -1,3 +1,5 @@
+import Food from './Food.jsx'
+
 function Track({ children }) {
   // content twice so the -50% loop is seamless
   return (
@@ -13,10 +15,10 @@ export default function Ribbons() {
     <section className="ribbons" aria-hidden="true">
       <div className="ribbon ribbon--big">
         <Track>
-          <span>LET'S GO!</span><em>🍹</em>
-          <span>FRESH JUICE</span><em>🍔</em>
-          <span>BURGERS</span><em>🍟</em>
-          <span>CHATPATAS</span><em>☕</em>
+          <span>LET'S GO!</span><em><Food kind="juice" /></em>
+          <span>FRESH JUICE</span><em><Food kind="burger" /></em>
+          <span>BURGERS</span><em><Food kind="fries" /></em>
+          <span>CHATPATAS</span><em><Food kind="chai" /></em>
         </Track>
       </div>
       <div className="ribbon ribbon--small">

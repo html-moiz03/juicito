@@ -1,5 +1,6 @@
 import { useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
+import Food from './Food.jsx'
 import { INFO } from '../data.js'
 
 export default function Hours() {
@@ -39,7 +40,7 @@ export default function Hours() {
 
         <div className="hrs__art" aria-hidden="true">
           <div className="hrs__disc" />
-          <div className="hrs__glass">🥤</div>
+          <div className="hrs__glass"><Food kind="juice" /></div>
         </div>
       </div>
     </section>

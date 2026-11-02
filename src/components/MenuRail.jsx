@@ -1,6 +1,7 @@
 import { useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { MENU, TEL, PHONE } from '../data.js'
+import Food from './Food.jsx'
 
 export default function MenuRail() {
   const root = useRef(null)
@@ -57,11 +58,12 @@ export default function MenuRail() {
             }}
           >
             <span className="mcard__n">{String(i + 1).padStart(2, '0')}</span>
+            <Food kind={m.kind} className="mcard__food" />
             <h3>{m.title}</h3>
             <ul>
               {m.items.map((it) => (
                 <li key={it.n}>
-                  <span className="e">{it.e}</span>
+                  <span className="e" aria-hidden="true" />
                   <span className="nm">{it.n}</span>
                   {it.p && <span className="pr">{it.p}</span>}
                 </li>

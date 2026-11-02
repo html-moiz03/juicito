@@ -1,5 +1,6 @@
 import { useLayoutEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
+import Food from './Food.jsx'
 import { INFO, TEL, PHONE } from '../data.js'
 
 export default function Visit() {
@@ -58,10 +59,10 @@ export default function Visit() {
             <a href={INFO.facebook}>Facebook</a>
           </div>
           <ul className="vis__amen vis__reveal">
-            <li><span>🍊</span>Fresh Juice</li>
-            <li><span>🍔</span>Burgers</li>
-            <li><span>☕</span>Hot Chai</li>
-            <li><span>🥗</span>Chatpata</li>
+            <li><span><Food kind="orange" /></span>Fresh Juice</li>
+            <li><span><Food kind="burger" /></span>Burgers</li>
+            <li><span><Food kind="chai" /></span>Hot Chai</li>
+            <li><span><Food kind="chaat" /></span>Chatpata</li>
           </ul>
         </div>
 
@@ -86,7 +87,7 @@ export default function Visit() {
               <defs><path id="circ2" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0" /></defs>
               <text><textPath href="#circ2">¡QUE APROVECHE! • FRESH EVERY TIME • JUICITO •</textPath></text>
             </svg>
-            <span>🍹</span>
+            <span><Food kind="shake" /></span>
           </div>
         </div>
       </div>

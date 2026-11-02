@@ -1,20 +1,21 @@
 import { useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { PHONE } from '../data.js'
+import Food from './Food.jsx'
 
 const LETTERS = [
   ['J', -5], ['U', 4], ['I', -3], ['C', 6], ['I', -6], ['T', 3], ['O', -4],
 ]
 
 const FRUITS = [
-  { e: '🍊', x: 6, y: 18, s: 7, d: 0.8 },
-  { e: '🍓', x: 84, y: 14, s: 6, d: 1.2 },
-  { e: '🍍', x: 70, y: 60, s: 8, d: 0.6 },
-  { e: '🥭', x: 18, y: 62, s: 6.5, d: 1 },
-  { e: '🍉', x: 44, y: 8, s: 5.5, d: 1.4 },
-  { e: '🍔', x: 90, y: 46, s: 6, d: 0.9 },
-  { e: '🍟', x: 3, y: 42, s: 5, d: 1.1 },
-  { e: '🍋', x: 56, y: 70, s: 4.5, d: 1.3 },
+  { k: 'orange', x: 6, y: 18, s: 7, d: 0.8 },
+  { k: 'strawberry', x: 84, y: 14, s: 6, d: 1.2 },
+  { k: 'pineapple', x: 70, y: 60, s: 8, d: 0.6 },
+  { k: 'mango', x: 18, y: 62, s: 6.5, d: 1 },
+  { k: 'watermelon', x: 44, y: 8, s: 5.5, d: 1.4 },
+  { k: 'burger', x: 90, y: 46, s: 6, d: 0.9 },
+  { k: 'fries', x: 3, y: 42, s: 5, d: 1.1 },
+  { k: 'lemon', x: 56, y: 70, s: 4.5, d: 1.3 },
 ]
 
 export default function Hero() {
@@ -75,7 +76,7 @@ export default function Hero() {
             data-depth={f.d}
             style={{ left: `${f.x}%`, top: `${f.y}%`, '--s': f.s }}
           >
-            <span className="fruit__in">{f.e}</span>
+            <span className="fruit__in"><Food kind={f.k} /></span>
           </div>
         ))}
       </div>
@@ -95,7 +96,7 @@ export default function Hero() {
             <textPath href="#circ">¡UNA MÁS! • FRESH • HYGIENIC • ENERGETIC •</textPath>
           </text>
         </svg>
-        <span>🥤</span>
+        <span><Food kind="juice" /></span>
       </div>
 
       <div className="hero__foot">

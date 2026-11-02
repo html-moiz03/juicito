@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
+import Food from './Food.jsx'
 
 const STRIPES = ['#b0005f', '#e6007e', '#f58220', '#ffc20e', '#66a81b']
 
@@ -37,7 +38,7 @@ export default function Loader({ onDone }) {
         ))}
       </div>
       <div className="loader__core">
-        <div className="loader__icon">🥤</div>
+        <div className="loader__icon"><Food kind="juice" /></div>
         <div className="loader__pill">Squeezing the good stuff… {pct}%</div>
         <div className="loader__bar">
           <span style={{ transform: `scaleX(${pct / 100})` }} />

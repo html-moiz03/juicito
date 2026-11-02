@@ -1,8 +1,9 @@
 import { useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
+import Food from './Food.jsx'
 
 const WORD = '¡JUICITO FIRST!'.split('')
-const BITS = ['🍊', '🍔', '🍓', '🍟', '🥭', '🍋', '🍹', '🍉']
+const BITS = ['orange', 'burger', 'strawberry', 'fries', 'mango', 'lemon', 'juice', 'watermelon']
 
 export default function Footer() {
   const root = useRef(null)
@@ -30,7 +31,7 @@ export default function Footer() {
       <p className="eyebrow eyebrow--yellow">PSST… TOUCH THE FRUIT</p>
       <div className="ftr__bits">
         {BITS.map((b, i) => (
-          <span key={i} className="ftr__bit"><span>{b}</span></span>
+          <span key={i} className="ftr__bit"><span><Food kind={b} /></span></span>
         ))}
       </div>
       <div className="ftr__big" aria-label="JUICITO first!">

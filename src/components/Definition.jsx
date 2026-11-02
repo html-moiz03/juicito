@@ -1,5 +1,6 @@
 import { useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
+import Food from './Food.jsx'
 
 const TEXT =
   'A place you stop at "just for a juice", then spot a burger, then fries, then a chaat, and somehow end up ordering for the whole table. Known for sudden cravings, "bas ek aur" and evenings that run longer than planned.'
@@ -32,8 +33,8 @@ export default function Definition() {
 
   return (
     <section className="def" ref={root}>
-      <div className="def__pic def__pic--a" aria-hidden="true"><span>🍹</span><small>photo here</small></div>
-      <div className="def__pic def__pic--b" aria-hidden="true"><span>🍔</span><small>photo here</small></div>
+      <div className="def__pic def__pic--a" aria-hidden="true"><span><Food kind="shake" /></span><small>photo here</small></div>
+      <div className="def__pic def__pic--b" aria-hidden="true"><span><Food kind="burger" /></span><small>photo here</small></div>
 
       <article className="def__card">
         <h2 className="def__title">JUICITO</h2>

@@ -1,5 +1,6 @@
 import { useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
+import Food from './Food.jsx'
 
 const HOW = [
   { n: '1', t: 'YOU CHOOSE YOUR CRAVING' },
@@ -31,9 +32,9 @@ export default function Statement() {
 
   return (
     <section className="stmt" ref={root}>
-      <span className="stmt__doodle d1" aria-hidden="true">🍓</span>
-      <span className="stmt__doodle d2" aria-hidden="true">🍋</span>
-      <span className="stmt__doodle d3" aria-hidden="true">🥭</span>
+      <span className="stmt__doodle d1" aria-hidden="true"><Food kind="strawberry" /></span>
+      <span className="stmt__doodle d2" aria-hidden="true"><Food kind="lemon" /></span>
+      <span className="stmt__doodle d3" aria-hidden="true"><Food kind="mango" /></span>
 
       <p className="eyebrow eyebrow--orange">SYNONYM: GOOD MOOD</p>
       <h2 className="stmt__script">
