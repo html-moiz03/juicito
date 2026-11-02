@@ -4,8 +4,8 @@
 // Prices: add  p: 'Rs. 250'  to any item and it shows.
 // ───────────────────────────────────────────────
 
-export const PHONE = '031 1110 382'
-export const TEL = 'tel:03111110382'
+export const PHONE = '0335 7316100'
+export const TEL = 'tel:03357316100'
 
 export const INFO = {
   branches: [
@@ -19,8 +19,10 @@ export const INFO = {
   hours: [
     { days: 'MON – SUN', time: '12:00 PM → 2:00 AM' },
   ],
-  instagram: '#',
-  facebook: '#',
+  instagram: 'https://www.instagram.com/juicitoofficial/',
+  facebook: 'https://www.facebook.com/juicito.pk/',
+  youtube: 'https://www.youtube.com/@Juicito.pk-Official',
+  tiktok: 'https://www.tiktok.com/@juicito.pk',
   foodpanda: '#',
 }
 

@@ -54,9 +54,10 @@ export default function Visit() {
             <a className="btn btn--line" href={open} target="_blank" rel="noreferrer">Get directions ↗</a>
           </div>
           <div className="vis__chips vis__reveal">
-            <a href={INFO.foodpanda}>foodpanda</a>
-            <a href={INFO.instagram}>Instagram</a>
-            <a href={INFO.facebook}>Facebook</a>
+            <a href={INFO.instagram} target="_blank" rel="noreferrer">Instagram</a>
+            <a href={INFO.facebook} target="_blank" rel="noreferrer">Facebook</a>
+            <a href={INFO.youtube} target="_blank" rel="noreferrer">YouTube</a>
+            <a href={INFO.tiktok} target="_blank" rel="noreferrer">TikTok</a>
           </div>
           <ul className="vis__amen vis__reveal">
             <li><span><Food kind="orange" /></span>Fresh Juice</li>
